@@ -18,6 +18,9 @@ pip install python-lsp-server
 pip install python-lsp-ruff
 pip install pylsp-rope
 
+## Ruff LSP
+pip install ruff-lsp
+
 ### Lint
 
 # pip install autopep8
