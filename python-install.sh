@@ -1,4 +1,4 @@
-## Pip
+### Pip
 
 pip install pip-autoremove      # alternatives: pip3-autoremove,
                                 # python3-pip-autoremove,
@@ -8,7 +8,17 @@ pip install pipdeptree          # alternaives: deptree, johnnydep, pipgrip, pip-
 pip install --no-deps pipreqs
 pip install yarg docopt         # dependecies for pipreqs
 
-## Python
+### LSP
+
+## python-lsp-server (pylsp)
+# pip install python-lsp-server[all]
+pip install python-lsp-server
+# pip install python-lsp-black
+# pip install python-lsp-isort
+pip install python-lsp-ruff
+pip install pylsp-rope
+
+### Lint
 
 # pip install autopep8
 # pip install black
