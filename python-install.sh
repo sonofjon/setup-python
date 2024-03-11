@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ### Pip
 
 pip3 install pip-autoremove      # alternatives: pip3-autoremove,
