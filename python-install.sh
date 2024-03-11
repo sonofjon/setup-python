@@ -1,34 +1,49 @@
 #!/bin/bash
 
+if grep -q Microsoft /proc/version 2>/dev/null; then
+    # Running in WSL (Ubuntu)
+    installer="pip3"
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+    # Running on native Linux
+    installer="pip3"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # Running on macOS
+    installer="pipx"
+else
+    echo "Unsupported OS"
+    exit 1
+fi
+
 ### Pip
 
-pip3 install pip-autoremove      # alternatives: pip3-autoremove,
-                                # python3-pip-autoremove,
-                                # only-pip3-autoremove
-pip3 install pip-search
+${installer} install pip-autoremove      # alternatives: pip3-autoremove,
+                                         # python3-pip-autoremove,
+                                         # only-pip3-autoremove
+${installer} install pip-search
 
-pip3 install pipdeptree          # alternaives: deptree, johnnydep,
-                                # pipgrip, pip-tree
-pip3 install --no-deps pipreqs
-pip3 install yarg docopt         # dependecies for pipreqs
+${installer} install pipdeptree          # alternaives: deptree, johnnydep,
+                                         # pipgrip, pip-tree
+${installer} install --no-deps pipreqs
+${installer} install yarg docopt         # dependecies for pipreqs
+
 ### LSP
 
 ## python-lsp-server (pylsp)
-# pip3 install python-lsp-server[all]
-pip3 install python-lsp-server
-# pip3 install python-lsp-black
-# pip3 install python-lsp-isort
-pip3 install python-lsp-ruff
-pip3 install pylsp-rope
+# ${installer} install python-lsp-server[all]
+${installer} install python-lsp-server
+# ${installer} install python-lsp-black
+# ${installer} install python-lsp-isort
+${installer} install python-lsp-ruff
+${installer} install pylsp-rope
 
 ## Ruff LSP
-pip3 install ruff-lsp
+${installer} install ruff-lsp
 
 ### Lint
 
-# pip3 install autopep8
-# pip3 install black
-# pip3 install flake8
-# pip3 install pylint
-pip3 install ruff
+# ${installer} install autopep8
+# ${installer} install black
+# ${installer} install flake8
+# ${installer} install pylint
+${installer} install ruff
 
