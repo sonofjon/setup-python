@@ -28,6 +28,9 @@ ${installer} install yarg docopt         # dependecies for pipreqs
 
 ### LSP
 
+## basedpyright
+${installer} install basedpyright
+
 ## python-lsp-server (pylsp)
 # ${installer} install python-lsp-server[all]
 ${installer} install python-lsp-server
