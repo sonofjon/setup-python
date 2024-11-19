@@ -40,6 +40,7 @@ ${installer} install python-lsp-ruff
 ${installer} install pylsp-rope
 
 ## Ruff LSP
+##   Note: # Does not support completion
 ${installer} install ruff-lsp
 
 ### Lint
