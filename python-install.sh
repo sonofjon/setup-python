@@ -34,10 +34,17 @@ ${installer} install basedpyright
 ## python-lsp-server (pylsp)
 # ${installer} install python-lsp-server[all]
 ${installer} install python-lsp-server
-# ${installer} install python-lsp-black
-# ${installer} install python-lsp-isort
-${installer} install python-lsp-ruff
-${installer} install pylsp-rope
+if [ ${installer} = "pipx" ]; then
+    # ${installer} inject python-lsp-server python-lsp-black
+    # ${installer} inject python-lsp-server python-lsp-isort
+    ${installer} inject python-lsp-server python-lsp-ruff
+    ${installer} inject python-lsp-server pylsp-rope
+else
+    # ${installer} install python-lsp-black
+    # ${installer} install python-lsp-isort
+    ${installer} install python-lsp-ruff
+    ${installer} install pylsp-rope
+fi
 
 ## Ruff LSP
 ##   Note: # Does not support completion
