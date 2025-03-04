@@ -33,6 +33,7 @@ ${installer} install basedpyright
 
 ## python-lsp-server (pylsp)
 # ${installer} install python-lsp-server[all]
+# ${installer} install python-lsp-server[rope]   # rope is not included with "all"
 ${installer} install python-lsp-server
 if [ ${installer} = "pipx" ]; then
     # ${installer} inject python-lsp-server python-lsp-black
