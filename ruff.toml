@@ -52,6 +52,9 @@ select = [
 # max-line-length = 88
 # max-doc-length = 88
 
+[lint.pydocstyle]
+convention = "google"
+
 [format]
 # Quoting style
 # quote-style = "double"
