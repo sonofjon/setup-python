@@ -39,7 +39,10 @@ select = [
     # "C90",
     # "C901",
 ]
-# ignore = []
+ignore = []
+  # COM812 conflicts with the ruff formatter (ruff-reformat-region)
+  #   https://github.com/astral-sh/ruff/issues/9216#issuecomment-1964386063
+  # ISC001 conflicts with the ruff formatter (ruff-reformat-region)
 
 # Fix selection
 # fixable = ["ALL"]
