@@ -14,7 +14,7 @@ line-length = 79
 # indent-width = 4
 
 # Python version
-# target-version = "py38"
+# target-version = "py39"
 
 [lint]
 # Rules selection
