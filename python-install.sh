@@ -23,8 +23,7 @@ ${installer} install pip-search
 
 ${installer} install pipdeptree          # alternaives: deptree, johnnydep,
                                          # pipgrip, pip-tree
-${installer} install --no-deps pipreqs
-${installer} install yarg docopt         # dependecies for pipreqs
+${installer} install pipreqs
 
 ### LSP
 
