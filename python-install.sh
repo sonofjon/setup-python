@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if grep -q Microsoft /proc/version 2>/dev/null; then
+if grep -q microsoft /proc/version 2>/dev/null; then
     # Running in WSL (Ubuntu)
     installer="pip3"
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
