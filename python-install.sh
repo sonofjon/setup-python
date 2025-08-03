@@ -2,7 +2,8 @@
 
 if grep -q microsoft /proc/version 2>/dev/null; then
     # Running in WSL (Ubuntu)
-    installer="pip3"
+    # installer="pip3"
+    installer="pipx"
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Running on native Linux
     installer="pip3"
