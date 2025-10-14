@@ -3,14 +3,14 @@
 if grep -q microsoft /proc/version 2>/dev/null; then
     # Running in WSL (Ubuntu)
     # installer="pip3"
-    installer="pipx"
+    installer="uv tool"
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Running on native Linux
     # installer="pip3"
-    installer="pipx"
+    installer="uv tool"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Running on macOS
-    installer="pipx"
+    installer="uv tool"
 else
     echo "Unsupported OS"
     exit 1
